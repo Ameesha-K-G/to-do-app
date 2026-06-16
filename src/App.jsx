@@ -6,7 +6,7 @@ import bgPattern from './bg-pattern.jpg';
 function App() {
   const [themeColor, setThemeColor] = useState(() => {
     const savedTheme = localStorage.getItem('my_theme');
-    return savedTheme ? savedTheme : '#007bff'; 
+    return savedTheme ? savedTheme : '#95c1f0'; 
   });
 
   const [tasks, setTasks] = useState(() => {
@@ -74,15 +74,16 @@ function App() {
       {/* TASK MANAGER CONTAINER */}
       <div style={{ 
         padding: '30px', 
-        fontFamily: 'Arial, sans-serif', 
+        fontFamily: "'Caveat', cursive",
+        fontSize: '18px', // Handwriting looks better slightly larger!
         maxWidth: '450px', 
         margin: '0 auto', 
-        backgroundColor: 'rgba(249, 249, 249, 0.75)', // 👈 Decreased container opacity to 75%
+        backgroundColor: 'rgba(246, 250, 247, 0.85)', // 👈 Decreased container opacity to 75%
         borderRadius: '12px', 
         boxShadow: '0 8px 24px rgba(0,0,0,0.15)' 
       }}>
         
-        <h2 style={{ textAlign: 'center', color: '#333', marginBottom: '5px' }}>📝 My Task Manager</h2>
+        <h2 style={{ textAlign: 'center', color: '#333', marginBottom: '5px' }}>📝The Checklist</h2>
         
         {/* THEME PICKER BAR */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '25px', marginTop: '15px' }}>
@@ -102,7 +103,7 @@ function App() {
                 height: '28px',
                 borderRadius: '50%',
                 backgroundColor: color.hex,
-                border: themeColor === color.hex ? '3px solid #333' : '1px solid #ccc',
+                border: themeColor === color.hex ? '3px solid #5c5757' : '1px solid #8aa6db',
                 cursor: 'pointer',
                 transform: themeColor === color.hex ? 'scale(1.15)' : 'scale(1)',
                 transition: 'all 0.2s ease'
@@ -125,6 +126,7 @@ function App() {
               borderRadius: '6px', 
               border: `2px solid ${themeColor}`,
               outline: 'none',
+              fontFamily: "'Comfortaa', sans-serif",
               fontSize: '16px',
               backgroundColor: 'rgba(255, 255, 255, 0.85)' // 👈 Subtle transparency for typing input too!
             }}
@@ -140,6 +142,7 @@ function App() {
               cursor: 'pointer', 
               display: 'flex', 
               alignItems: 'center',
+              fontFamily: "'Comfortaa', sans-serif",
               fontSize: '16px'
             }}
           >
@@ -160,7 +163,7 @@ function App() {
                   alignItems: 'center', 
                   justifyContent: 'space-between', 
                   padding: '12px', 
-                  backgroundColor: 'rgba(255, 255, 255, 0.45)', // 👈 Decreased individual tab background opacity to 45%
+                  backgroundColor: 'rgba(255, 255, 255, 0.97)', // 👈 Decreased individual tab background opacity to 45%
                   borderLeft: `5px solid ${itemBorderColor}`, 
                   boxShadow: `inset 0 0 0 100px ${itemBgColor}`, 
                   marginBottom: '10px', 
@@ -176,6 +179,7 @@ function App() {
                     style={{ 
                       flex: 1, 
                       padding: '6px', 
+                      fontFamily: "'Comfortaa', sans-serif",
                       fontSize: '16px', 
                       marginRight: '10px', 
                       borderRadius: '4px', 
@@ -197,6 +201,7 @@ function App() {
                       textDecoration: task.completed ? 'line-through' : 'none', 
                       color: task.completed ? '#a0a0a0' : '#222', 
                       fontSize: '16px',
+                      fontFamily: "'Comfortaa', sans-serif",
                       fontWeight: task.completed ? 'normal' : '600' // Enhanced font weight slightly so text pops over transparency
                     }}>
                     {task.text}
@@ -225,7 +230,7 @@ function App() {
         </ul>
 
         {tasks.length === 0 && (
-          <p style={{ textAlign: 'center', color: '#888', marginTop: '20px' }}>No tasks left! Enjoy your day! 🎉</p>
+          <p style={{ textAlign: 'center', color: '#363131', marginTop: '20px' }}>No tasks left! Enjoy your day! 🎉</p>
         )}
       </div>
     </div>
