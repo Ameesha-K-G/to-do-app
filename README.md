@@ -25,11 +25,7 @@ A beautiful, responsive React task manager featuring local storage persistence, 
 
 ---
 
-## 🚀 Local Setup Instructions
 
-Follow these quick instructions to spin up the project locally on your machine:
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/YOUR-USERNAME/my-todo-app.git](https://github.com/YOUR-USERNAME/my-todo-app.git)
-   cd my-todo-app
+
+
